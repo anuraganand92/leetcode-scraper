@@ -1,6 +1,3 @@
-# scrape leetcode questions into text files for easy reference and searching using selenium and beautifulsoup
-# usage: python3 leetcode_scraper.py
-
 import os
 import time
 import re
@@ -81,8 +78,4 @@ if len(sys.argv) > 1:
         for file in files:
             with open(os.path.join(root, file), "r") as f:
                 if re.search(sys.argv[1], f.read(), re.IGNORECASE):
-                    print(file) 
-
-
-
-
+                    print(file)
