@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 # set up selenium
 options = Options()
@@ -16,9 +17,9 @@ driver = webdriver.Chrome(options=options)
 
 # login to leetcode
 driver.get("https://leetcode.com/accounts/login/")
-driver.find_element_by_id("id_login").send_keys("your_username")
-driver.find_element_by_id("id_password").send_keys("your_password")
-driver.find_element_by_id("signin_btn").click()
+driver.find_element(By.ID,"id_login").send_keys("username")
+driver.find_element(By.ID,"id_password").send_keys("password")
+driver.find_element(By.ID,"signin_btn").click()
 
 # wait for login to complete
 time.sleep(5)
