@@ -7,7 +7,6 @@ This repository contains a collection of LeetCode questions that have been scrap
 1. Install the necessary dependencies:
    - Python
    - Selenium
-   - BeautifulSoup
    - ChromeDriver
 
 2. Set up the script:
